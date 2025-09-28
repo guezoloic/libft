@@ -10,7 +10,7 @@ OBJ 	= $(SRC:.c=.o)
 CFLAGS	= -Wall -Wextra -Werror -pedantic
 
 $(LIB): $(OBJ) # <--- OBJ will run $.o: %.c pattern
-	$(STATIC) $(LIB) $(OBJ) 
+	$(STATIC) $(LIB) $(OBJ)
 
 %.o: %.c # <--- compile any .c file into its corresponding .o automatically
 	${CC} ${CFLAGS} -c $< -o $@
