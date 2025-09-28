@@ -3,7 +3,7 @@
 .DEFAULT_GOAL := all 
 
 SRC 	= $(wildcard *.c)
-LIB 	= libft.a
+LIB 	= libft.a # <--- NAME
 STATIC 	= ar -rcs
 CC 		= clang
 OBJ 	= $(SRC:.c=.o)
@@ -18,4 +18,9 @@ $(LIB): $(OBJ) # <--- OBJ will run $.o: %.c pattern
 all: $(LIB)
 
 clean: 
-	rm -f $(OBJ) $(LIB) 
+	rm -f $(OBJ)
+
+fclean: clean
+	rm -f $(LIB)
+
+re: fclean $(LIB)
