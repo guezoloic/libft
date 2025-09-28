@@ -1,0 +1,32 @@
+name: Static Analysis
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  norminette:
+    name: Norminette Check
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: 3.x
+
+      - name: Install Norminette
+        run: pip install norminette
+
+      # Remove headers from Norminette repo
+      - name: Remove Norminette header check
+        run: |
+          NORM_PATH=$(python3 -c "import norminette; print(norminette.__file__)")
+          rm -f "$(dirname "$NORM_PATH")/rules/check_header.py"
+
+      - name: Run Norminette
+        run: norminette ./*.c
