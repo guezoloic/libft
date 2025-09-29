@@ -1,6 +1,8 @@
 #ifndef LIBFT_A
 #define LIBFT_A
 
+# include <stdlib.h>
+
 /*
     The ft_isalpha() function tests for
     any character for which isupper(3) or
@@ -38,5 +40,11 @@ int	ft_isascii(int c);
     space (‘ ’).
 */
 int	ft_isprint(int c);
+
+/*
+    The strlen() function computes the 
+    length of the string s.
+*/
+size_t	strlen(const char *s);
 
 #endif
