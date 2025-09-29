@@ -2,7 +2,7 @@
 #define LIBFT_A
 
 /*
-    The isalpha() function tests for
+    The ft_isalpha() function tests for
     any character for which isupper(3) or
     islower(3) is true.
  */
@@ -31,5 +31,12 @@ int ft_isalnum(int c);
     0177 inclusive. 
  */
 int	ft_isascii(int c);
+
+/*
+    The ft_isprint() function tests for 
+    any printing character, including
+    space (‘ ’).
+*/
+int	ft_isprint(int c);
 
 #endif
