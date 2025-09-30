@@ -1,6 +1,7 @@
 #ifndef LIBFT_A
 #define LIBFT_A
 
+#include <stddef.h>
 # include <stdlib.h>
 
 /*
@@ -46,5 +47,12 @@ int	ft_isprint(int c);
 	the length of the string s.
 */
 size_t	ft_strlen(const char *s);
+
+/*
+	The ft_memset() function writes len 
+	bytes of value c (converted to an 
+	unsigned char) to the string b.
+*/
+void	*ft_memset(void *b, int c, size_t len); 
 
 #endif
