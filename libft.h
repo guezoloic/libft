@@ -71,4 +71,13 @@ void	ft_bzero(void *s, size_t n);
 */
 void	*ft_memcpy(void *dst, const void *src, size_t n);
 
+/*
+	The memmove() function copies len 
+	bytes from string src to string dst. 
+	The two strings may overlap; the 
+	copy is always done in a non-destructive 
+	manner.
+*/
+void	*ft_memmove(void *dst, const void *src, size_t n);
+
 #endif
