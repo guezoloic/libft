@@ -56,13 +56,13 @@ size_t	ft_strlen(const char *s);
 void	*ft_memset(void *b, int c, size_t len); 
 
 /*
-	The bzero() function writes n zeroed 
+	The ft_bzero() function writes n zeroed 
 	bytes to the string s.
 */
 void	ft_bzero(void *s, size_t n);
 
 /*
-	The memcpy() function copies n bytes 
+	The ft_memcpy() function copies n bytes 
 	from memory area src to memory area dst.  
 	If dst and src overlap, behavior is 
 	undefined.  Applications in which dst and 
@@ -72,7 +72,7 @@ void	ft_bzero(void *s, size_t n);
 void	*ft_memcpy(void *dst, const void *src, size_t n);
 
 /*
-	The memmove() function copies len 
+	The ft_memmove() function copies len 
 	bytes from string src to string dst. 
 	The two strings may overlap; the 
 	copy is always done in a non-destructive 
@@ -81,7 +81,7 @@ void	*ft_memcpy(void *dst, const void *src, size_t n);
 void	*ft_memmove(void *dst, const void *src, size_t n);
 
 /*
-	strlcpy() copies up to dstsize - 1 
+	ft_strlcpy() copies up to dstsize - 1 
 	characters from the string src to 
 	dst, NUL-terminating the result if
 	dstsize is not 0.
@@ -91,10 +91,17 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize);
 // size_t	ft_strlcat(char *dst, const char *src, size_t dstsize);
 
 /*
-	The toupper() function converts a 
+	The ft_toupper() function converts a 
 	lower-case letter to the 
 	corresponding upper-case letter.
 */
 int	ft_toupper(int c);
+
+/*
+	The ft_tolower() function converts 
+	an upper-case letter to the 
+	corresponding lower-case letter.
+*/
+int	ft_tolower(int c);
 
 #endif
