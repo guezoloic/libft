@@ -104,6 +104,18 @@ int	ft_toupper(int c);
 */
 int	ft_tolower(int c);
 
+/*
+	The ft_strchr() function locates the 
+	first occurrence of c (converted to 
+	a char) in the string pointed to by s.
+*/
 char	*ft_strchr(const char *s, int c);
+
+/*
+	The strrchr() function is identical 
+	to strchr() except it locates the 
+	last occurrence of c.
+*/
+char	*ft_strrchr(const char *s, int c);
 
 #endif
