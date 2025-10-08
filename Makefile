@@ -24,3 +24,6 @@ fclean: clean
 	rm -f $(LIB)
 
 re: fclean $(LIB)
+
+norm: all
+	@act push --container-architecture linux/amd64
