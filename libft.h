@@ -2,7 +2,7 @@
 #define LIBFT_A
 
 #include <stddef.h>
-# include <stdlib.h>
+#include <stdlib.h>
 
 /*
 	The ft_isalpha() function tests for
@@ -128,5 +128,13 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n);
 	an unsigned char) in string s.
 */
 void	*ft_memchr(const void *s, int c, size_t n);
+
+// TODO
+int	ft_memcmp(const void *s1, const void *s2, size_t n);
+
+// TODO
+char	*ft_strnstr(const char *haystack, const char *needle, size_t len);
+
+int	ft_atoi(const char *str);
 
 #endif
