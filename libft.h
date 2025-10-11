@@ -88,7 +88,8 @@ void	*ft_memmove(void *dst, const void *src, size_t n);
 */
 size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize);
 
-// size_t	ft_strlcat(char *dst, const char *src, size_t dstsize);
+// TODO
+size_t	ft_strlcat(char *dst, const char *src, size_t dstsize);
 
 /*
 	The ft_toupper() function converts a 
@@ -112,10 +113,20 @@ int	ft_tolower(int c);
 char	*ft_strchr(const char *s, int c);
 
 /*
-	The strrchr() function is identical 
+	The ft_strrchr() function is identical 
 	to strchr() except it locates the 
 	last occurrence of c.
 */
 char	*ft_strrchr(const char *s, int c);
+
+// TODO
+int	ft_strncmp(const char *s1, const char *s2, size_t n);
+
+/*
+	he ft_memchr() function locates the 
+	first occurrence of c (converted to 
+	an unsigned char) in string s.
+*/
+void	*ft_memchr(const void *s, int c, size_t n);
 
 #endif
