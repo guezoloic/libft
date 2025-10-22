@@ -1,5 +1,5 @@
 # .SILENT:
-.PHONY: all clean
+.PHONY: all clean fclean re norm
 .DEFAULT_GOAL := all 
 
 SRC 	= $(wildcard *.c)
