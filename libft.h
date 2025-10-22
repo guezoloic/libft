@@ -135,6 +135,11 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n);
 // TODO
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len);
 
+/*
+	The ft_atoi() function converts the
+	initial portion of the string pointed 
+	to by str to int representation.
+*/
 int	ft_atoi(const char *str);
 
 #endif
