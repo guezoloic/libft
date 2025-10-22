@@ -3,21 +3,27 @@
 int	ft_atoi(const char *str)
 {
 	int		value;
-	size_t	len;
 	size_t	i;
-	int		n;
+	int		is_negative;
 
 	value = 0;
-	len = ft_strlen(str);
 	i = 0;
-	while (i < len)
+	is_negative = 0;
+	while (str[i] == ' ')
+		i++;
+	if (str[i] == '-')
 	{
-		if (!ft_isdigit(str[i]))
-			return (value);
-		n = (int)(str[i] - '0');
-		value *= 10;
-		value += n;
+		is_negative = 1;
 		i++;
 	}
-	return (value);
+	else if (str[i] == '+')
+		i++;
+	while (str[i] && ft_isdigit(str[i]))
+	{
+		value *= 10 + ((int)(str[i] - '0'));
+	}
+	if (is_negative)
+		return (value * -1);
+	else
+		return (value);
 }
